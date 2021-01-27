@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def save(name, chapter_page, directory):
     # chapters = chapters[:2]
     filename = format_filename(f"{name}.txt")
-    print(filename)
+    # print(filename)
     filepath = os.path.join(directory, filename)
     data = chapter_page.find('div', class_='chapter-content')
     text = clean([i.get_text() for i in data.select('p')])
