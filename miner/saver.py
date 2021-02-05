@@ -6,6 +6,13 @@ from miner.config import config_data
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # print(BASE_DIR)
 def save(name, chapter_page, directory):
+    """
+    Save the text from the chapter page into a text file.
+    
+    name: title of the chapter
+    chapter_page: the BeautifulSoup object of the chapter webpage
+    directory: the directory to save the file in
+    """
     # chapters = chapters[:2]
     filename = format_filename(f"{name}.txt")
     # print(filename)
